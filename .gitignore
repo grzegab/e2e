@@ -1,0 +1,5 @@
+#InteliJ files
+.idea
+/e2e/var/configs/*
+!/e2e/var/configs/.gitkeep
+/e2e/.env.local
