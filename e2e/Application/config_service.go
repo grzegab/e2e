@@ -29,7 +29,7 @@ func GetConfig() Config {
 	Interface.StartMsgLine()
 	Interface.PrintSimpleText("Checking env file...")
 
-	err := godotenv.Load(".env")
+	err := godotenv.Load(".env.local", ".env")
 	if err != nil {
 		Interface.PrintSuccessText("Failed")
 		Interface.EndMsgLine()

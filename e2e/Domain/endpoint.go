@@ -144,7 +144,7 @@ func (e *Endpoint) Validate() {
 			e.Requests[i].TestInformation = append(r.TestInformation, "There was an error while request: "+r.HttpError.Error())
 		}
 
-		if !gotRequiredStatusCode {
+		if gotRequiredStatusCode == false {
 			possibleStatuses := fmt.Sprintf("possible statuses: %v", possibleStatusCodes)
 			e.Requests[i].TestInformation = append(r.TestInformation, "Wrong status code! "+possibleStatuses+", got: "+strconv.Itoa(r.Response.StatusCode))
 		}
